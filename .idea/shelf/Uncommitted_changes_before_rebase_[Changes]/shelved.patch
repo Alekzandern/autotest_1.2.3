@@ -1,0 +1,19 @@
+Index: src/test/java/ru/netology/PostmanEchoTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ru.netology;\r\n\r\n\r\nimport org.junit.jupiter.api.Test;\r\n\r\nimport static io.restassured.RestAssured.given;\r\nimport static org.hamcrest.Matchers.equalTo;\r\n\r\nclass MobileBankApiTestV1 {\r\n    @Test\r\n    void shouldReturnDemoAccounts() {\r\n\r\n        given()\r\n                .baseUri(\"https://postman-echo.com\")\r\n                .body(\"Hi\")\r\n\r\n                .when()\r\n                .post(\"/post\")\r\n\r\n                .then()\r\n                .statusCode(200)\r\n                .body(\"data\", equalTo(\"Hi\"))\r\n        ;\r\n    }\r\n}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/ru/netology/PostmanEchoTest.java b/src/test/java/ru/netology/PostmanEchoTest.java
+--- a/src/test/java/ru/netology/PostmanEchoTest.java	(revision 9264c7b7c05d8adc5c0226185107b10c9732591f)
++++ b/src/test/java/ru/netology/PostmanEchoTest.java	(date 1691714483371)
+@@ -19,7 +19,7 @@
+ 
+                 .then()
+                 .statusCode(200)
+-                .body("data", equalTo("Hi"))
++                .body("data", equalTo("Hey"))
+         ;
+     }
+ }

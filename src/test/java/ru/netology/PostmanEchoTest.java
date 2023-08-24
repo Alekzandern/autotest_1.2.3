@@ -23,5 +23,3 @@ class MobileBankApiTestV1 {
         ;
     }
 }
-
-
